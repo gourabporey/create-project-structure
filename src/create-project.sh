@@ -18,16 +18,6 @@ function create_project() {
   cp ~/my-utils/create-project-structure/lib/runtest.sh .;
   open -a "iTerm"; clear;
   ./runtest.sh;
-
-  local OPEN_VIM="vim $PROJECT_NAME/src/$PROJECT_NAME.js";
-  local OSA_SCPT="tell application \"iTerm\" 
-  create window with default profile 
-  tell current session of current window 
-  write text \"$OPEN_VIM\" 
-end tell 
-end tell";
-
-echo "$OSA_SCPT" | osascript;
 }
 
-create_project $1
+create_project $1;
