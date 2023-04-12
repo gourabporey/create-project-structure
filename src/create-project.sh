@@ -1,5 +1,5 @@
 #! /bin/bash
-source ~/my-utils/create-project-structure/case-conversion.sh
+source lib/case-conversion.sh
 
 function create_project() {
   local PROJECT_NAME=$1;
@@ -29,7 +29,6 @@ end tell
 end tell";
 
 echo "$OSA_SCPT" | osascript;
-cd $PROJECT_NAME;
 }
 
 create_project $1
